@@ -1,20 +1,20 @@
 const AboutMe = () => {
   return (
-    <section>
+    <section id="about-me">
       <h2>About Me</h2>
-      <img src="../../Assets/profile.png" alt="Nathan Green" width={400} height={600}/>
+      <img src="src/Assets/profile.png" alt="Nathan Green" width={400} height={600}/>
       <p>
-        <div>
+        <section>
           <h2>Hi! I’m Nathan Green</h2>
-          <article>
+          <p>
             I’m a former software salesperson and aspiring full-stack developer with a passion for building web
             applications that solve real-world problems. My journey into development stems from my professional
             background, love for problem-solving, and curiosity about how technology shapes our lives.
-          </article>
-        </div>
+          </p>
+        </section>
 
-        <div>
-          <h3>From Sales to Software Development</h3>
+        <section>
+          <h2>From Sales to Software Development</h2>
           <p>
             For years, I worked in software sales, acting as the bridge between clients and development teams. This role
             gave me insight into the software development lifecycle and taught me how to identify and communicate client
@@ -27,10 +27,10 @@ const AboutMe = () => {
             skills—qualities that now help me as a developer when working in teams or interpreting project requirements.
             My background also instilled a user-focused mindset that I bring to every project I tackle.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3>Why Full-Stack Development?</h3>
+        <section>
+          <h2>Why Full-Stack Development?</h2>
           <p>
             What excites me about full-stack development is the ability to work on both the front and back ends of an
             application. I enjoy designing intuitive user interfaces that look great and function seamlessly while
@@ -42,10 +42,10 @@ const AboutMe = () => {
             workflows, creating new tools, or enhancing user experiences, I thrive on finding creative, impactful
             solutions.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3>Interests and Inspirations</h3>
+        <section>
+          <h2>Interests and Inspirations</h2>
           <p>
             Outside of coding, I’m an avid skier. The thrill of tackling challenging slopes, coupled with the serenity
             of the mountains, is something I deeply cherish. Skiing has taught me persistence, adaptability, and
@@ -56,20 +56,20 @@ const AboutMe = () => {
             continuous journey of discovery. Each project, bug fix, and new concept reinforces my love for technology
             and the joy of mastering new skills.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3>My Vision as a Developer</h3>
+        <section>
+          <h2>My Vision as a Developer</h2>
           <p>
             As an aspiring full-stack developer, I aim to build applications that are functional, accessible, and
             impactful. Great software isn’t just about solving problems; it’s about crafting user experiences that are
             meaningful and enjoyable. To achieve this, I prioritize empathy, staying current with industry trends, and
             adhering to core development principles.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3>Projects and Goals</h3>
+        <section>
+          <h2>Projects and Goals</h2>
           <p>
             While I’m early in my development journey, I’ve already built several projects, including web applications
             that enhance user experiences and tools powered by APIs. Each project has taught me new skills, from
@@ -80,10 +80,10 @@ const AboutMe = () => {
             emerging technologies like artificial intelligence and blockchain. These goals align with my passion for
             pushing boundaries and continuous learning.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3>Why This Journey Matters</h3>
+        <section>
+          <h2>Why This Journey Matters</h2>
           <p>
             This career shift from sales to development is about more than just a new role—it’s a reflection of my
             desire to grow and contribute meaningfully. I believe in the transformative power of technology and am
@@ -93,10 +93,10 @@ const AboutMe = () => {
             What drives me most is the limitless potential of the tech industry. Every day brings new opportunities to
             learn, create, and collaborate. For me, coding is not just a career but a way to make a lasting impact.
           </p>
-        </div>
+        </section>
 
-        <div>
-          <h3>In Closing</h3>
+        <section>
+          <h2>In Closing</h2>
           <p>
             In summary, I’m Nathan Green—a former software salesperson turned aspiring full-stack developer. I’m
             passionate about solving problems through technology, building impactful applications, and continuously
@@ -107,7 +107,7 @@ const AboutMe = () => {
             Thank you for taking the time to learn about me. If you’d like to connect, collaborate, or chat about
             technology, skiing, or anything in between, feel free to reach out!
           </p>
-        </div>
+        </section>
       </p>
     </section>
   );
