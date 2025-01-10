@@ -1,3 +1,12 @@
+/* General styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  background-color: #ccdad1; /* Light green */
+  color: #38302E; /* Dark brown */
+  line-height: 1.6;
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,38 +14,138 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Header */
+header {
+  background-color: #9CAEA9; /* Medium green-gray */
+  color: #38302E; /* Dark brown */
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 2px solid #6F6866; /* Dark gray */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #38302E; /* Dark brown */
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  background-color: #6F6866; /* Dark gray */
+  color: #ccdad1; /* Light green */
+}
+
+/* Main content */
+main {
+  padding: 2rem;
+}
+
+main h2 {
+  color: #788585; /* Grayish green */
+}
+
+main p {
+  margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+button {
+  background-color: #788585; /* Grayish green */
+  color: #ccdad1; /* Light green */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: black;
+  transform: scale(1.05);
+  border-radius: 25px;
+}
+
+button:focus {
+  outline: 2px solid #38302E; /* Dark brown */
+  outline-offset: 2px;
+  border-radius: 25px;
+}
+
+/* Footer */
+footer {
+  background-color: #38302E; /* Dark brown */
+  color: #ccdad1; /* Light green */
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Accessibility enhancements */
+a:focus,
+button:focus {
+  outline: 2px dashed #9CAEA9; /* Medium green-gray */
+  outline-offset: 2px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
   }
-}
 
-.card {
-  padding: 2em;
-}
+  nav {
+    flex-direction: column;
+  }
 
-.read-the-docs {
-  color: #888;
+  nav a {
+    padding: 0.5rem 0;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  main h2 {
+    font-size: 1.5rem;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+
+  button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.9rem;
+  }
 }
