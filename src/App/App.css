@@ -20,7 +20,7 @@ header {
   color: #38302E; /* Dark brown */
   padding: 1rem;
   text-align: center;
-  border-bottom: 2px solid #6F6866; /* Dark gray */
+  border: 2px solid #6F6866; /* Dark gray */
 }
 
 header h1 {
@@ -50,7 +50,7 @@ main {
 }
 
 main h2 {
-  color: #788585; /* Grayish green */
+  color: #38302E; /* Grayish green */
 }
 
 main p {
@@ -85,10 +85,12 @@ button:focus {
 /* Footer */
 footer {
   background-color: #9CAEA9; /* Dark brown */
-  color: black; /* Light green */
+  color: black; /* Black */
   text-align: center;
   padding: 1rem;
   margin-top: 2rem;
+  font-weight: bolder;
+  border: 2px solid #6F6866;
 }
 
 footer button {
