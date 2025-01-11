@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', message: '' });
-  const [errors, setErrors] = useState({ name: '', email: '', message: '' });
+  const [errors, setErrors] = useState({ firstName: '', lastName: '', email: '', message: '' });
 
-  const validateEmail = (email: string) => /\S+@\S+\.\S+/.test(email);
+  const validateEmail :(email:string) => boolean = (email: string) => /\S+@\S+\.\S+/.test(email);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors = {
-      name: formData.firstName ? '' : 'First name is required.',
+      firstName: formData.firstName ? '' : 'First name is required.',
       lastName: formData.lastName ? '' : 'Last name is required.',
       email: validateEmail(formData.email) ? '' : 'Enter a valid email.',
       message: formData.message ? '' : 'A message is required.',
@@ -32,9 +32,9 @@ const Contact = () => {
             type="text"
             value={formData.firstName}
             onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-            onBlur={() => setErrors({...errors, name: formData.firstName ? '' : 'Name is required.'})}
+            onBlur={() => setErrors({...errors, firstName: formData.firstName ? '' : 'First name is required.'})}
           />
-          {errors.name && <span>{errors.name}</span>}
+          {errors.firstName && <span>{errors.firstName}</span>}
         </div>
         <div>
           <label htmlFor="lastName">Last Name:</label>
@@ -43,9 +43,9 @@ const Contact = () => {
             type="text"
             value={formData.lastName}
             onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-            onBlur={() => setErrors({...errors, name: formData.lastName ? '' : 'Name is required.'})}
+            onBlur={() => setErrors({...errors, lastName: formData.lastName ? '' : 'Last name is required.'})}
           />
-          {errors.name && <span>{errors.name}</span>}
+          {errors.lastName && <span>{errors.lastName}</span>}
         </div>
           <div>
             <label htmlFor="email">Email:</label>
