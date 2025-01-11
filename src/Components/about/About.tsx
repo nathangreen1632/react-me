@@ -2,7 +2,7 @@ const AboutMe = () => {
   return (
     <section id="about-me">
       <h2>About Me</h2>
-      <img src="src/Assets/profile.png" alt="Nathan Green" width={400} height={600}/>
+      <img src="/profile.png" alt="Nathan Green" width={400} height={600}/>
       <p>
         <section className={"project-card"}>
           <h2>Hi! I’m Nathan Green</h2>
