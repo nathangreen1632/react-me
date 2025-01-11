@@ -2,15 +2,16 @@ const Resume = () => {
   return (
     <section>
       <h2>Resume</h2>
-      <a href="../../Assets/NathanGreen_Resume.pdf" download>Download Resume</a>
+      <a href="../../Assets/NathanGreen_Resume.pdf" download><button>Download Resume</button></a>
       <h3>Proficiencies</h3>
-      <ul>
-        <li>React</li>
-        <li>TypeScript</li>
+      <ul className="project-card">
+        <li>HTML</li>
+        <li>CSS</li>
         <li>JavaScript</li>
         <li>Node.js</li>
-        <li>SQL</li>
-        <li>MongoDB</li>
+        <li>PostgreSQL</li>
+        <li>React</li>
+        <li>CLI Apps</li>
       </ul>
     </section>
   );

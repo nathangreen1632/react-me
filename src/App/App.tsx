@@ -1,4 +1,4 @@
-
+import { useState} from "react";
 import { Routes, Route, NavLink } from 'react-router-dom';
 import AboutMe from '../Components/about/About.tsx';
 import Portfolio from '../Components/porfolio/Portfolio.tsx';
@@ -7,9 +7,24 @@ import Resume from '../Components/resume/Resume.tsx';
 import './App.css';
 
 
+
+
 const App = () => {
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
+
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    document.body.dataset.theme = newTheme;
+  };
+
+
+
   return (
     <div>
+      <button className="theme-toggle" onClick={toggleTheme}>
+        {theme === 'light' ? '☀️' : '🌙'}
+      </button>
       <header>
         <h1>Nathan Green</h1>
         <nav>
@@ -41,9 +56,14 @@ const App = () => {
         <br/>
         <div>
           <a href="https://github.com/nathangreen1632" target="_blank" rel="noopener noreferrer">
-            <button>GitHub</button></a>
-          <a href="https://www.linkedin.com/in/jgreen1632" target="_blank" rel="noopener noreferrer"><button>LinkedIn</button></a>
-          <a href="https://stackoverflow.com/users/27279774/nathan" target="_blank" rel="noopener noreferrer"><button>Stack Overflow</button></a>
+            <button>GitHub</button>
+          </a>
+          <a href="https://www.linkedin.com/in/jgreen1632" target="_blank" rel="noopener noreferrer">
+            <button>LinkedIn</button>
+          </a>
+          <a href="https://stackoverflow.com/users/27279774/nathan" target="_blank" rel="noopener noreferrer">
+            <button>Stack Overflow</button>
+          </a>
         </div>
         <br/>
       </footer>
