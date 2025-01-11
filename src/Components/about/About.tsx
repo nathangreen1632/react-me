@@ -4,7 +4,7 @@ const AboutMe = () => {
       <h2>About Me</h2>
       <img src="src/Assets/profile.png" alt="Nathan Green" width={400} height={600}/>
       <p>
-        <section>
+        <section className={"project-card"}>
           <h2>Hi! I’m Nathan Green</h2>
           <p>
             I’m a former software salesperson and aspiring full-stack developer with a passion for building web
@@ -13,7 +13,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>From Sales to Software Development</h2>
           <p>
             For years, I worked in software sales, acting as the bridge between clients and development teams. This role
@@ -29,7 +29,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>Why Full-Stack Development?</h2>
           <p>
             What excites me about full-stack development is the ability to work on both the front and back ends of an
@@ -44,7 +44,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>Interests and Inspirations</h2>
           <p>
             Outside of coding, I’m an avid skier. The thrill of tackling challenging slopes, coupled with the serenity
@@ -58,7 +58,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>My Vision as a Developer</h2>
           <p>
             As an aspiring full-stack developer, I aim to build applications that are functional, accessible, and
@@ -68,7 +68,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>Projects and Goals</h2>
           <p>
             While I’m early in my development journey, I’ve already built several projects, including web applications
@@ -82,7 +82,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>Why This Journey Matters</h2>
           <p>
             This career shift from sales to development is about more than just a new role—it’s a reflection of my
@@ -95,7 +95,7 @@ const AboutMe = () => {
           </p>
         </section>
 
-        <section>
+        <section className={"project-card"}>
           <h2>In Closing</h2>
           <p>
             In summary, I’m Nathan Green—a former software salesperson turned aspiring full-stack developer. I’m
