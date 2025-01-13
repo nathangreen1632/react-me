@@ -81,7 +81,7 @@ main p {
 /* Buttons */
 button {
   padding: 0.5rem 1rem;
-  margin: 0;
+  margin: 0.25rem;
   background-color: #788585;
   color: #ccdad1;
   border: none;
@@ -93,7 +93,10 @@ button {
 
 button:hover {
   background-color: black;
+  color: orange;
   transform: scale(1.05);
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 button:focus {
@@ -208,8 +211,11 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #6F6866;
+  background-color: black;
   transform: scale(1.05);
+  color: orange;
+  border-radius: 30px;
+  font-weight: bold;
 }
 
 /* Resume Proficiencies */
