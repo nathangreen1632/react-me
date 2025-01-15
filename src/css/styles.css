@@ -30,6 +30,22 @@ header h1 {
   margin: 0;
   font-size: 2.5rem;
   text-align: center;
+    font-weight: bold;
+}
+
+#about-me {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+#about-me img {
+  max-width: 100%;
+  height: auto;
+  margin: 1rem;
 }
 
 .theme-toggle {
@@ -72,6 +88,10 @@ main {
 
 main h2 {
   color: #38302E;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+
 }
 
 main p {

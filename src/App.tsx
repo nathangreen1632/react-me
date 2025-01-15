@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
-import AboutMe from '../Components/about/About.tsx';
-import Portfolio from '../Components/porfolio/Portfolio.tsx';
-import Contact from '../Components/contact/Contact.tsx';
-import Resume from '../Components/resume/Resume.tsx';
-import './App.css';
+import AboutMe from './Pages/About.tsx';
+import Portfolio from './Pages/Portfolio.tsx';
+import Contact from './Pages/Contact.tsx';
+import Resume from './Pages/Resume.tsx';
+
+
 
 const App = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
