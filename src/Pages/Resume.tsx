@@ -2,7 +2,7 @@ const Resume = () => {
   return (
     <section>
       <h2 className="project-card">Resume</h2>
-      <a href="../assets/NathanGreen_Resume.pdf" download><button>Download Resume</button></a>
+      <a href="/public/NathanGreen_Resume.pdf" download="NathanGreen_Resume.pdf"><button>Download Resume</button></a>
       <h2 className="project-card">Proficiencies</h2>
       <ul className="project-card">
         <li>HTML</li>
