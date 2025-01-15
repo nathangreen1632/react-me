@@ -325,7 +325,7 @@ li {
   }
 
   main p {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
   }
 
   button {
@@ -349,6 +349,10 @@ li {
     padding: 1rem;
   }
 
+  .project-card h2 {
+    font-size: 2rem;
+  }
+
   form {
     padding: 2rem;
   }
@@ -358,7 +362,7 @@ li {
   }
 
   label {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   input[type="text"],
@@ -407,7 +411,7 @@ li {
   }
 
   main p {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 
   button {
@@ -431,6 +435,10 @@ li {
     padding: 0.5rem;
   }
 
+  .project-card h2 {
+    font-size: 1.75rem;
+  }
+
   form {
     padding: 1rem;
   }
@@ -440,7 +448,7 @@ li {
   }
 
   label {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   input[type="text"],
@@ -468,7 +476,7 @@ li {
   }
 
   main p {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
 
   button {
@@ -486,6 +494,10 @@ li {
 
   .project-card {
     padding: 0.5rem;
+  }
+
+  .project-card h2 {
+    font-size: 1.5rem;
   }
 
   form {
@@ -554,7 +566,7 @@ li {
   }
 
   label {
-    font-size: 0.625rem;
+    font-size: 0.825rem;
   }
 
   input[type="text"],
