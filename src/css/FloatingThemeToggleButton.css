@@ -1,0 +1,22 @@
+.floating-theme-toggle-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
+    transition: transform 0.3s, background-color 0.3s;
+    z-index: 1000;
+
+}
+
+.floating-theme-toggle-button:hover {
+    transform: scale(1);
+    color: orange;
+    border-radius: 30px;
+    font-weight: bold;
+    outline: 2px solid #646cff;
+
+}

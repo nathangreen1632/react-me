@@ -22,6 +22,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
 }
 
 header h1 {
@@ -58,7 +59,7 @@ header h1 {
 }
 
 .theme-toggle:hover {
-  transform: scale(1.25);
+  transform: scale(1.05);
 }
 
 nav {
@@ -108,18 +109,19 @@ button {
 
 button:hover {
   background-color: black;
-  color: orange;
   transform: scale(1);
-  border-radius: 25px;
+  color: orange;
+  border-radius: 30px;
   font-weight: bold;
+  outline: 2px solid #646cff;
 }
 
 button:focus {
   color: orange;
-  outline: 2px solid #38302E;
-  outline-offset: 2px;
-  border-radius: 25px;
   font-weight: bold;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  border-radius: 30px;
 }
 
 footer {
@@ -130,6 +132,7 @@ footer {
   margin-top: 2rem;
   font-weight: bolder;
   border: 2px solid #6F6866;
+  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
 }
 
 footer button {
@@ -137,7 +140,8 @@ footer button {
 }
 
 .projects {
-  display: grid;
+  display: flex;
+  flex-direction: column-reverse;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
   padding: 1rem 0;
@@ -149,6 +153,7 @@ footer button {
   border-radius: 8px;
   text-align: center;
   margin: 1rem 0;
+  box-shadow: 2px 8px 12px rgba(2, 2, 2, 1);
 }
 
 .project-card h2 {
@@ -163,6 +168,14 @@ footer button {
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
   font-weight: bold;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
 }
 
 form {
@@ -202,10 +215,11 @@ textarea {
   color: #38302E;
   box-sizing: border-box;
   transition: border-color 0.3s;
+  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
 }
 
 textarea {
-  resize: none;
+  resize: vertical;
 }
 
 input:focus,
@@ -230,7 +244,7 @@ button[type="submit"] {
   border-radius: 5px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: transform 0.2s;
   width: 100%;
   margin: 0 auto;
 }
@@ -241,14 +255,15 @@ button[type="submit"]:hover {
   color: orange;
   border-radius: 30px;
   font-weight: bold;
+  outline: 2px solid #646cff;
 }
 
 button[type="submit"]:focus {
-  outline: 2px solid #38302E; /* Dark brown */
-  outline-offset: 2px;
-  border-radius: 30px;
   color: orange;
   font-weight: bold;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  border-radius: 30px;
 }
 
 ul {
@@ -279,23 +294,115 @@ li {
 }
 
 [data-theme='dark'] header {
-  background-color: #9CAEA9;
+  background-color: black;
   color: #ffffff;
+  border: none;
 }
 
 [data-theme='dark'] h2 {
-  color: #ffffff;
+  background-color: black;
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] ul {
+  background-color: black;
+  color: #FAF9F6;
 }
 
 [data-theme='dark'] h3 {
-  color: #ffffff;
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] p {
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] section {
+  background-color: black;
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] a {
+  color: #646cff;
+}
+
+[data-theme='dark'] a:hover {
+  color: #535bf2;
+}
+
+[data-theme='dark'] div {
+  background-color: black;
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] input[type="text"] {
+  background-color: black;
+  color: #FAF9F6;
+  border: 1px solid #646cff;
+}
+
+[data-theme='dark'] input[type="email"] {
+  background-color: black;
+  color: #FAF9F6;
+  border: 1px solid #646cff;
+}
+
+[data-theme='dark'] textarea {
+  background-color: black;
+  color: #FAF9F6;
+  border: 1px solid #646cff;
+}
+
+[data-theme='dark'] form {
+  background-color: black;
+  color: #FAF9F6;
+  border: none ;
+}
+
+[data-theme='dark'] form h2 {
+  color: #FAF9F6;
 }
 
 [data-theme='dark'] label {
-  color: #ffffff;
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] button {
+  background-color: #646cff;
+  color: orange;
+  font-weight: bold;
+}
+
+[data-theme='dark'] button:hover {
+  background-color: black;
+  transform: scale(1);
+  color: orange;
+  border-radius: 30px;
+  font-weight: bold;
+  outline: 2px solid #646cff;
+}
+
+[data-theme='dark'] button:focus {
+  color: orange;
+  font-weight: bold;
+  outline: 2px solid orange;
+  outline-offset: 2px;
+  border-radius: 30px;
+}
+
+[data-theme='dark'] footer {
+    background-color: black;
+    color: #FAF9F6;
+    border: none;
 }
 
 @media (min-width: 1024px) {
+  .floating-theme-toggle-button {
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
   #root {
     padding: 2rem;
   }
@@ -382,6 +489,12 @@ li {
 
 
 @media (max-width: 768px) {
+  .floating-theme-toggle-button {
+    top: 5px;
+    right: 5px;
+    padding: 5px;
+    font-size: 10px;
+  }
   #root {
     padding: 1rem;
   }

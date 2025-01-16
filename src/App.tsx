@@ -1,10 +1,10 @@
-
 import { Routes, Route, NavLink } from 'react-router-dom';
 import AboutMe from './Pages/About.tsx';
 import Portfolio from './Pages/Portfolio.tsx';
 import Contact from './Pages/Contact.tsx';
 import Resume from './Pages/Resume.tsx';
 import DarkLightToggle from "./components/darkMode.tsx";
+import FloatingThemeToggleButton from "./components/FloatingThemeToggleButton.tsx";
 
 
 const App = () => {
@@ -13,6 +13,7 @@ const App = () => {
       <header>
         <h1>Nathan Green</h1>
         <DarkLightToggle />
+        <FloatingThemeToggleButton />
         <nav>
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}><button>About Me</button></NavLink>
           <br/>
