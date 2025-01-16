@@ -52,7 +52,7 @@ header h1 {
   right: 1rem;
   background: none;
   border: none;
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   cursor: pointer;
   transition: transform 0.3s;
 }

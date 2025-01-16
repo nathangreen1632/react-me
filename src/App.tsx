@@ -1,31 +1,18 @@
-import { useEffect, useState } from 'react';
+
 import { Routes, Route, NavLink } from 'react-router-dom';
 import AboutMe from './Pages/About.tsx';
 import Portfolio from './Pages/Portfolio.tsx';
 import Contact from './Pages/Contact.tsx';
 import Resume from './Pages/Resume.tsx';
-
+import DarkLightToggle from "./components/darkMode.tsx";
 
 
 const App = () => {
-  const [theme, setTheme] = useState(localStorage.getItem('theme') ?? 'light');
-
-  useEffect(() => {
-    document.body.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-  }, [theme]);
-
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === 'light' ? 'dark' : 'light'));
-  };
-
   return (
     <div>
       <header>
         <h1>Nathan Green</h1>
-        <button onClick={toggleTheme} className="theme-toggle">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
+        <DarkLightToggle />
         <nav>
           <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}><button>About Me</button></NavLink>
           <br/>
