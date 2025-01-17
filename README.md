@@ -20,7 +20,7 @@
 - [Tests](#tests)
 - [License](#license)
 - [Questions](#questions)
-- [Video Tutorial](#video-tutorial)
+- [Link to Portfolio](#Link-to-Portfolio)
 
 ---
 
@@ -198,7 +198,6 @@ If you have any questions or feedback, feel free to reach out via the following 
 
 ---
 
-## Video Tutorial
+## Link to Portfolio
 
-A video walkthrough of the application is available to guide you through its features and functionality:
-[Portfolio Walkthrough](https://www.youtube.com/watch?v=example).
+Here is a link to my Portfolio [Nathan Green Portfolio](https://react-me-portfolio.netlify.app/)
