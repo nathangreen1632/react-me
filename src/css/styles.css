@@ -277,6 +277,15 @@ li {
   font-weight: bold;
 }
 
+.vertical-text {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: upright; /* Ensures letters stay upright */
+  transform: rotate(360deg); /* Optional: flips the text to read top-to-bottom */
+  font-size: 0.875rem; /* Adjust size as needed */
+  text-align: center;
+}
+
 
 [data-theme='light'] {
   background-color: #ccdad1;
@@ -493,7 +502,7 @@ li {
     top: 5px;
     right: 5px;
     padding: 5px;
-    font-size: 10px;
+    font-size: 15px;
   }
   #root {
     padding: 1rem;

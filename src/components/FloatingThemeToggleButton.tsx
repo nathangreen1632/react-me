@@ -19,7 +19,10 @@ const FloatingThemeToggleButton: React.FC = () => {
       onClick={toggleTheme}
       aria-label="Toggle Light/Dark Mode"
     >
-      {theme === 'light' ? '🌚' : '🌕️'}
+      <div className="flex flex-col items-center">
+        <p>{theme === 'light' ? '🌚' : '🌕️'}</p>
+        <p className="vertical-text">{theme === 'light' ? 'Dark Mode' : 'Light Mode'}</p>
+      </div>
     </button>
   );
 };
