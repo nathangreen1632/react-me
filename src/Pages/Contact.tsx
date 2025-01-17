@@ -9,10 +9,10 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const newErrors = {
-      firstName: formData.firstName ? '' : 'First name is required.',
-      lastName: formData.lastName ? '' : 'Last name is required.',
-      email: validateEmail(formData.email) ? '' : 'Enter a valid email.',
-      message: formData.message ? '' : 'A message is required.',
+      firstName: formData.firstName ? '' : 'First name is required',
+      lastName: formData.lastName ? '' : 'Last name is required',
+      email: validateEmail(formData.email) ? '' : 'Enter a valid email',
+      message: formData.message ? '' : 'Message is required',
     };
     setErrors(newErrors);
 
