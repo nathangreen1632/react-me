@@ -1,3 +1,18 @@
+/* Root Variables */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Resets */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
@@ -13,6 +28,7 @@ body {
   text-align: center;
 }
 
+/* Header */
 header {
   background-color: #9CAEA9;
   color: #38302E;
@@ -22,14 +38,14 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1)
 }
 
 header h1 {
   margin: 0;
   font-size: 2.5rem;
   text-align: center;
-    font-weight: bold;
+  font-weight: bold;
 }
 
 #about-me {
@@ -37,14 +53,13 @@ header h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  padding: 2rem;
-  margin: 1rem 0;
 }
 
 #about-me img {
   max-width: 100%;
   height: auto;
   margin: 1rem;
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1)
 }
 
 .theme-toggle {
@@ -62,6 +77,7 @@ header h1 {
   transform: scale(1.05);
 }
 
+/* Navigation */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -79,26 +95,28 @@ nav a {
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* Main Content */
 main {
   padding: 2rem;
 }
 
 main h2 {
   color: #38302E;
-    margin-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 main p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+  text-align: left;
 }
 
+/* Buttons */
 button {
   padding: 0.5rem 1rem;
   margin: 0.35rem;
-  background-color: #788585;
+  background-color: black;
   color: #ccdad1;
   border: none;
   border-radius: 5px;
@@ -109,7 +127,7 @@ button {
 
 button:hover {
   background-color: black;
-  transform: scale(1);
+  transform: scale(1.05);
   color: orange;
   border-radius: 30px;
   font-weight: bold;
@@ -124,6 +142,16 @@ button:focus {
   border-radius: 30px;
 }
 
+.vertical-text {
+  display: inline-block;
+  writing-mode: vertical-rl;
+  text-orientation: upright; /* Ensures letters stay upright */
+  transform: rotate(360deg); /* Optional: flips the text to read top-to-bottom */
+  font-size: 0.875rem; /* Adjust size as needed */
+  text-align: center;
+}
+
+/* Footer */
 footer {
   background-color: #9CAEA9;
   color: black;
@@ -132,13 +160,14 @@ footer {
   margin-top: 2rem;
   font-weight: bolder;
   border: 2px solid #6F6866;
-  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1)
 }
 
 footer button {
-  margin: 0.5rem;
+  margin: 1rem;
 }
 
+/* Projects */
 .projects {
   display: flex;
   flex-direction: column-reverse;
@@ -153,14 +182,14 @@ footer button {
   border-radius: 8px;
   text-align: center;
   margin: 1rem 0;
-  box-shadow: 2px 8px 12px rgba(2, 2, 2, 1);
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1);
 }
 
 .project-card h2 {
-    color: #38302E;
-    margin-bottom: 0.5rem;
-    font-size: 2rem;
-    font-weight: bold;
+  color: #38302E;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
 }
 
 .project-card h3 {
@@ -170,23 +199,64 @@ footer button {
   font-weight: bold;
 }
 
-.project-screenshot {
+.project-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 1rem;
-  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1)
 }
 
+.project-cards-container {
+  display: flex;
+  flex-direction: column; /* Or row, depending on layout */
+  align-items: center; /* Centers items horizontally */
+  justify-content: center; /* Centers items vertically if necessary */
+  margin: 0 auto; /* Ensures the container itself is centered */
+}
+
+
+.project-card-resume {
+  background-color: #9CAEA9;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 1rem auto; /* Ensures horizontal centering */
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1);
+  width: 60%;
+}
+
+.project-card-resume h2 {
+  color: #38302E;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.project-card-resume ul {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card-resume li {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+/* Forms */
 form {
   max-width: 400px;
   margin: 2rem auto;
   background-color: #9CAEA9;
   padding: 1.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 2px 8px 12px rgba(0.2, 0.2, 0.2, 1);
   border: 2px solid #6F6866;
-  box-sizing: border-box;
 }
 
 form h2 {
@@ -213,9 +283,7 @@ textarea {
   font-size: 1rem;
   background-color: #ccdad1;
   color: #38302E;
-  box-sizing: border-box;
-  transition: border-color 0.3s;
-  box-shadow: 2px 4px 6px rgba(1.5, 1.5, 1.5, 2);
+  box-shadow: 2px 4px 6px rgba(0.15, 0.15, 0.15, 0.2);
 }
 
 textarea {
@@ -230,91 +298,30 @@ textarea:focus {
 
 span {
   color: red;
-  font-size: 0.875rem;
-  margin-top: -0.5rem;
-  margin-bottom: 1rem;
-  display: block;
 }
 
-button[type="submit"] {
-  background-color: black;
-  color: #ccdad1;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: transform 0.2s;
-  width: 100%;
-  margin: 0 auto;
-}
-
-button[type="submit"]:hover {
-  background-color: black;
-  transform: scale(1);
-  color: orange;
-  border-radius: 30px;
-  font-weight: bold;
-  outline: 2px solid #646cff;
-}
-
-button[type="submit"]:focus {
-  color: orange;
-  font-weight: bold;
-  outline: 2px solid orange;
-  outline-offset: 2px;
-  border-radius: 30px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  padding: 0.5rem 0;
-  font-weight: bold;
-}
-
-.vertical-text {
-  display: inline-block;
-  writing-mode: vertical-rl;
-  text-orientation: upright; /* Ensures letters stay upright */
-  transform: rotate(360deg); /* Optional: flips the text to read top-to-bottom */
-  font-size: 0.875rem; /* Adjust size as needed */
-  text-align: center;
-}
-
-
+/* Light and Dark Themes */
 [data-theme='light'] {
   background-color: #ccdad1;
   color: #38302E;
 }
 
-[data-theme='light'] header {
-  background-color: #9CAEA9;
-  color: #38302E;
-}
-
 [data-theme='dark'] {
-  background-color: black;
-  color: #ffffff;
-}
-
-[data-theme='dark'] header {
-  background-color: black;
-  color: #ffffff;
-  border: none;
-}
-
-[data-theme='dark'] h2 {
   background-color: black;
   color: #FAF9F6;
 }
 
-[data-theme='dark'] ul {
+[data-theme='dark'] header {
   background-color: black;
+  color: #FAF9F6;
+  border: none;
+}
+
+[data-theme='dark'] h1 {
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] h2 {
   color: #FAF9F6;
 }
 
@@ -322,7 +329,13 @@ li {
   color: #FAF9F6;
 }
 
-[data-theme='dark'] p {
+[data-theme='dark'] form {
+  background-color: black;
+  color: #FAF9F6;
+  border: none;
+}
+
+[data-theme='dark'] label {
   color: #FAF9F6;
 }
 
@@ -331,12 +344,10 @@ li {
   color: #FAF9F6;
 }
 
-[data-theme='dark'] a {
-  color: #646cff;
-}
-
-[data-theme='dark'] a:hover {
-  color: #535bf2;
+[data-theme='dark'] footer {
+  background-color: black;
+  color: #FAF9F6;
+  border: none;
 }
 
 [data-theme='dark'] div {
@@ -344,364 +355,37 @@ li {
   color: #FAF9F6;
 }
 
+[data-theme='dark'] div .project-card-resume {
+  background-color: black;
+  color: #FAF9F6;
+}
+
+[data-theme='dark'] nav a {
+  color: #FAF9F6;
+}
+
 [data-theme='dark'] input[type="text"] {
   background-color: black;
   color: #FAF9F6;
-  border: 1px solid #646cff;
 }
 
 [data-theme='dark'] input[type="email"] {
   background-color: black;
   color: #FAF9F6;
-  border: 1px solid #646cff;
 }
 
 [data-theme='dark'] textarea {
   background-color: black;
   color: #FAF9F6;
-  border: 1px solid #646cff;
 }
 
-[data-theme='dark'] form {
-  background-color: black;
-  color: #FAF9F6;
-  border: none ;
-}
-
-[data-theme='dark'] form h2 {
-  color: #FAF9F6;
-}
-
-[data-theme='dark'] label {
-  color: #FAF9F6;
-}
-
-[data-theme='dark'] button {
-  background-color: #646cff;
-  color: orange;
-  font-weight: bold;
-}
-
-[data-theme='dark'] button:hover {
-  background-color: black;
-  transform: scale(1);
-  color: orange;
-  border-radius: 30px;
-  font-weight: bold;
-  outline: 2px solid #646cff;
-}
-
-[data-theme='dark'] button:focus {
-  color: orange;
-  font-weight: bold;
-  outline: 2px solid orange;
-  outline-offset: 2px;
-  border-radius: 30px;
-}
-
-[data-theme='dark'] footer {
-    background-color: black;
-    color: #FAF9F6;
-    border: none;
-}
-
-@media (min-width: 1024px) {
-  .floating-theme-toggle-button {
-    top: 5px;
-    right: 5px;
-    padding: 5px;
-    font-size: 10px;
-  }
-  #root {
-    padding: 2rem;
-  }
-
-  header h1 {
-    font-size: 3rem;
-  }
-
-  #about-me {
-    padding: 2rem;
-  }
-
-  nav {
-    gap: 1rem;
-  }
-
-  nav a {
-    padding: 0.5rem 1rem;
-  }
-
-  main {
-    padding: 2rem;
-  }
-
-  main h2 {
-    font-size: 2.5rem;
-  }
-
-  main p {
-    font-size: 1.15rem;
-  }
-
-  button {
-    padding: 0.5rem 1rem;
-    font-size: 1.25rem;
-  }
-
-  footer {
-    padding: 1rem;
-  }
-
-  footer button {
-    margin: 0.5rem;
-  }
-
-  .projects {
-    padding: 1rem;
-  }
-
-  .project-card {
-    padding: 1rem;
-  }
-
-  .project-card h2 {
-    font-size: 2rem;
-  }
-
-  form {
-    padding: 2rem;
-  }
-
-  form h2 {
-    font-size: 2.5rem;
-  }
-
-  label {
-    font-size: 1.25rem;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    font-size: 1rem;
-  }
-
-  span {
-    font-size: 0.875rem;
-  }
-
-  button[type="submit"] {
-    font-size: 1.25rem;
-  }
-}
-
-
+/* Media Queries */
 @media (max-width: 768px) {
-  .floating-theme-toggle-button {
-    top: 5px;
-    right: 5px;
-    padding: 5px;
-    font-size: 15px;
-  }
-  #root {
-    padding: 1rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  #about-me {
-    padding: 1rem;
-  }
-
   nav {
     gap: 0.5rem;
   }
 
   nav a {
     padding: 0.25rem 0.5rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  main h2 {
-    font-size: 1.5rem;
-  }
-
-  main p {
-    font-size: 1.25rem;
-  }
-
-  button {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-  }
-
-  footer {
-    padding: 0.5rem;
-  }
-
-  footer button {
-    margin: 0.25rem;
-  }
-
-  .projects {
-    padding: 0.5rem;
-  }
-
-  .project-card {
-    padding: 0.5rem;
-  }
-
-  .project-card h2 {
-    font-size: 1.75rem;
-  }
-
-  form {
-    padding: 1rem;
-  }
-
-  form h2 {
-    font-size: 1.5rem;
-  }
-
-  label {
-    font-size: 1rem;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    font-size: 0.875rem;
-  }
-
-  span {
-    font-size: 0.75rem;
-  }
-
-  button[type="submit"] {
-    font-size: 0.875rem;
-  }
-}
-
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5rem;
-  }
-
-  main h2 {
-    font-size: 1.25rem;
-  }
-
-  main p {
-    font-size: 1rem;
-  }
-
-  button {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.75rem;
-  }
-
-  footer {
-    padding: 0.5rem;
-  }
-
-  footer button {
-    margin: 0.25rem;
-  }
-
-  .project-card {
-    padding: 0.5rem;
-  }
-
-  .project-card h2 {
-    font-size: 1.5rem;
-  }
-
-  form {
-    padding: 1rem;
-  }
-
-  form h2 {
-    font-size: 1.25rem;
-  }
-
-  label {
-    font-size: 0.75rem;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    font-size: 0.75rem;
-  }
-
-  span {
-    font-size: 0.625rem;
-  }
-
-  button[type="submit"] {
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 320px) {
-  header h1 {
-    font-size: 1.25rem;
-  }
-
-  main h2 {
-    font-size: 1rem;
-  }
-
-  main p {
-    font-size: 0.75rem;
-  }
-
-  button {
-    padding: 0.25rem 0.5rem;
-    font-size: 0.625rem;
-  }
-
-  footer {
-    padding: 0.5rem;
-  }
-
-  footer button {
-    margin: 0.25rem;
-  }
-
-  .project-card {
-    padding: 0.5rem;
-  }
-
-  form {
-    padding: 1rem;
-  }
-
-  form h2 {
-    font-size: 1rem;
-  }
-
-  label {
-    font-size: 0.825rem;
-  }
-
-  input[type="text"],
-  input[type="email"],
-  textarea {
-    font-size: 0.625rem;
-  }
-
-  span {
-    font-size: 0.5rem;
-  }
-
-  button[type="submit"] {
-    font-size: 0.625rem;
   }
 }
