@@ -1,79 +1,63 @@
-import React, { useState } from 'react';
-
 const Contact = () => {
-  const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', message: '' });
-  const [errors, setErrors] = useState({ firstName: '', lastName: '', email: '', message: '' });
-
-  const validateEmail :(email:string) => boolean = (email: string) => /\S+@\S+\.\S+/.test(email);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const newErrors = {
-      firstName: formData.firstName ? '' : 'First name is required',
-      lastName: formData.lastName ? '' : 'Last name is required',
-      email: validateEmail(formData.email) ? '' : 'Enter a valid email',
-      message: formData.message ? '' : 'Message is required',
-    };
-    setErrors(newErrors);
-
-    if (!Object.values(newErrors).some(error => error)) {
-      console.log('Form submitted:', formData);
-    }
-  };
-
   return (
-    <section>
-      <h2>Contact Me</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="firstName">First Name:</label>
-          <input
-            id="firstName"
-            type="text"
-            value={formData.firstName}
-            onChange={(e) => setFormData({...formData, firstName: e.target.value})}
-            onBlur={() => setErrors({...errors, firstName: formData.firstName ? '' : 'First name is required.'})}
-          />
-          {errors.firstName && <span>{errors.firstName}</span>}
-        </div>
-        <div>
-          <label htmlFor="lastName">Last Name:</label>
-          <input
-            id="lastName"
-            type="text"
-            value={formData.lastName}
-            onChange={(e) => setFormData({...formData, lastName: e.target.value})}
-            onBlur={() => setErrors({...errors, lastName: formData.lastName ? '' : 'Last name is required.'})}
-          />
-          {errors.lastName && <span>{errors.lastName}</span>}
-        </div>
-          <div>
-            <label htmlFor="email">Email:</label>
-            <input
-              id="email"
-              type="email"
-              value={formData.email}
-              onChange={(e) => setFormData({...formData, email: e.target.value})}
-              onBlur={() =>
-                setErrors({...errors, email: validateEmail(formData.email) ? '' : 'Enter a valid email.'})
-              }
-            />
-            {errors.email && <span>{errors.email}</span>}
-          </div>
-          <div>
-            <label htmlFor="message">Message:</label>
-            <textarea
-              id="message"
-              value={formData.message}
-              onChange={(e) => setFormData({...formData, message: e.target.value})}
-              onBlur={() => setErrors({...errors, message: formData.message ? '' : 'Message is required.'})}
-            />
-            {errors.message && <span>{errors.message}</span>}
-          </div>
-          <button type="submit">Submit</button>
-      </form>
+    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-6 rounded-md text-center my-8 shadow-md">
+      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
+      <p className="mb-4">
+        If you'd like to connect or collaborate, feel free to reach out through any of the following methods:
+      </p>
+
+      <ul className="space-y-2 text-base font-medium">
+        <li>
+          <strong>Email:</strong>{' '}
+          <a
+            href="mailto:jgreen1632@gmail.com"
+            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50"
+          >
+            jgreen1632@gmail.com
+          </a>
+        </li>
+        <li>
+          <strong>Stack Overflow:</strong>{' '}
+          <a
+            href="https://stackoverflow.com/users/27279774/nathan"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50"
+          >
+            Nathan Green
+          </a>
+        </li>
+        <li>
+          <strong>GitHub:</strong>{' '}
+          <a
+            href="https://github.com/nathangreen1632"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50"
+          >
+            nathangreen1632
+          </a>
+        </li>
+        <li>
+          <strong>LinkedIn:</strong>{' '}
+          <a
+            href="https://www.linkedin.com/in/jgreen1632"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50"
+          >
+            jgreen1632
+          </a>
+        </li>
+        <li>
+          <strong>Phone:</strong> (512) 787-0879
+        </li>
+        <li>
+          <strong>Location:</strong> Kyle, Texas
+        </li>
+      </ul>
     </section>
-);
+  );
 };
 
 export default Contact;
