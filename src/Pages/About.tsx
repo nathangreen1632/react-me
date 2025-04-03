@@ -1,116 +1,139 @@
-const AboutMe = () => {
+import { motion } from 'framer-motion';
+import React from 'react';
+
+const AboutMe: React.FC = () => {
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6 },
+    }),
+  };
+
+  const sections = [
+    {
+      title: 'Hi! I’m Jonathan Green',
+      content: [
+        <>I’m a former software salesperson and aspiring full-stack developer who’s passionate about building web applications that create real-world impact. After years of helping clients adopt tech solutions, I decided to shift gears and start building those solutions myself.</>,
+        <>Now studying Computer Science at <a href="https://www.utsa.edu" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">UTSA</a>, I bring a business-savvy, results-driven mindset to engineering—blending my background in sales, finance, and communication with modern development tools like React, Node.js, PostgreSQL, and the OpenAI API.</>,
+        <>I’m currently developing <a href="https://www.cvitaepro.com" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">CVitaePRO</a>, an AI-powered resume and cover letter generator, as well as other full-stack projects focused on UX clarity and backend scalability.</>,
+      ],
+    },
+    {
+      title: 'From Sales to Software Development',
+      content: [
+        <>For years, I worked in software sales, serving as the key link between clients and development teams. I wasn’t just selling solutions—I was translating business pain points into technical possibilities and working closely with engineers to make sure our product delivered real value. That front-line experience gave me a unique window into the software development lifecycle: from early discovery and scoping to deployment and iteration.</>,
+        <>Over time, I realized I didn’t just want to be the person talking about the product—I wanted to be the one building it. My curiosity about how the software worked under the hood grew stronger, and I found myself more drawn to wireframes, workflows, and product logic than sales pitches and quotas.</>,
+        <>Sales sharpened my communication, teamwork, and active listening skills—traits I now lean on heavily as a developer when collaborating cross-functionally or gathering requirements. It also gave me a deep appreciation for the user’s perspective. Every app I work on starts with the question: What problem are we solving, and how can we make the experience seamless?</>,
+        <>Now as an aspiring full-stack engineer, I’m channeling that user-first mindset and cross-disciplinary experience into building intuitive, scalable applications—like my <a href="https://kanban-board-t5ud.onrender.com" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">Kanban Board</a> and CVitaePRO, which are designed to turn user needs into clean, actionable solutions.</>,
+      ],
+    },
+    {
+      title: 'Why Full-Stack Development',
+      content: [
+        <>What excites me most about full-stack development is its breadth — the ability to contribute to every layer of an application, from the backend systems that power functionality to the frontend interfaces that shape how users interact with it. Coming from a background in sales, I spent years listening to users, identifying pain points, and communicating solutions. Now, as a developer, I get to do more than just describe those solutions — I get to build them.</>,
+        <>I love the challenge of designing clean, intuitive user interfaces that feel natural and frictionless. But I also enjoy diving into the logic behind the scenes — writing backend code that’s robust, scalable, and maintainable. The full-stack path gives me the creative and technical freedom to take a product idea and carry it from concept to execution.</>,
+        <>What drives me most is solving real problems with technology. In sales, I learned that the best solutions aren't always flashy — they're thoughtful, precise, and built with the user in mind. That same mindset now fuels my development work. Whether it’s streamlining a workflow, automating a process, or building a tool that saves someone time, I thrive on making things better — and knowing I made it happen with code.</>,
+        <>For me, full-stack development isn’t just a job title — it’s a bridge between my past and my future. It’s the space where my background in communication, problem-solving, and client empathy intersects with my growing technical expertise. It’s where I feel most empowered to make an impact.</>,
+      ],
+    },
+    {
+      title: 'Interests and Inspirations',
+      content: [
+        <>Outside of coding, I’m an avid skier. There’s something powerful about standing at the top of a mountain, staring down a steep slope, and knowing it’s just you, your training, and your instincts. Skiing has taught me discipline, mental toughness, and how to stay composed under pressure. You learn quickly that progress comes from repetition, patience, and pushing yourself one turn at a time — the same way you level up in software development, one line of code and one bug fix at a time.</>,
+        <>Skiing also offers contrast — the quiet calm of the mountains and the adrenaline of the descent. It reminds me to stay balanced: to embrace intensity when needed, but also to take a step back and reflect. That duality shapes how I approach problem-solving in code: intense focus when I’m in the zone, and deliberate thought when I’m debugging or designing architecture.</>,
+        <>I’m also deeply committed to lifelong learning. Transitioning from software sales into development hasn’t just been a career move — it’s been a mindset shift. Each new language, framework, or concept is a fresh slope to navigate, and every challenge is an opportunity to improve. That drive to grow — both personally and technically — is what keeps me inspired.</>,
+        <>Whether I’m refining a tricky algorithm or carving through fresh snow, I bring the same grit, focus, and passion to both. For me, development and skiing aren't just hobbies or skills — they’re disciplines that shape how I think, how I work, and how I live.</>,
+      ],
+    },
+    {
+      title: 'My Vision as a Developer',
+      content: [
+        <>As an aspiring full-stack developer, I envision building applications that go beyond functionality — tools that solve real problems, are accessible to all users, and feel genuinely satisfying to interact with. I want my work to matter, not just by meeting requirements, but by creating experiences that resonate with people.</>,
+        <>In my projects so far — from this very portfolio site and a dynamic <a href="https://github.com/nathangreen1632/socialNetwork" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">social networking platform</a> to CVitaePRO — I’ve focused on building full-stack applications with real-world relevance. These projects have taught me how to structure scalable APIs, design clean UI flows, and connect frontend and backend logic into a cohesive system. But more than that, they’ve reinforced the importance of usability, clarity, and empathy in everything I create.</>,
+        <>To me, great software is equal parts engineering and storytelling. It's about understanding the user's journey, anticipating their needs, and making complex functionality feel simple. That’s the lens I bring to every project: How can this experience be more intuitive? How can it make someone’s day a little easier or their work more efficient?</>,
+        <>Looking ahead, I want to work on scalable, production-ready systems that support real users — whether that means contributing to open-source projects, collaborating with product teams, or leading technical builds from scratch. I’m particularly interested in developing solutions that combine API engineering, UI design, and AI-powered insights to push what's possible with modern web applications.</>,
+        <>At the core of my vision is this belief: technology should empower, not overwhelm. That means writing thoughtful, maintainable code; staying grounded in accessibility and user needs; and always striving to grow as both a developer and a communicator. I'm not just here to build — I'm here to build with purpose.</>,
+      ],
+    },
+    {
+      title: 'Projects and Goals',
+      content: [
+        <>While I’m still early in my development journey, I’ve already built a number of full-stack applications that reflect both my technical growth and my commitment to creating tools that solve real problems. My projects have helped me master core development workflows, work with REST APIs, and build intuitive, responsive interfaces using modern frameworks.</>,
+        <>One of my most meaningful projects is <a href="https://www.cvitaepro.com" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">CVitaePRO</a>, an AI-powered resume and cover letter generator. It leverages OpenAI, features JWT authentication, and offers guided resume editing. I continue to enhance its features with new technologies like ATS scoring and downloadable formats.</>,
+        <>I’ve also created a <a href="https://kanban-board-t5ud.onrender.com" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">Kanban Board</a> with local storage and drag-and-drop task management, a <a href="https://github.com/nathangreen1632/socialNetwork" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">SocialNetwork App</a> focused on user interaction and activity feeds, and this <a href="/portfolio" className="underline text-blue-700 hover:text-blue-900">portfolio site</a> you’re reading now — all coded in React with TypeScript and tailored for real usability.</>,
+        <>Most recently, I launched <a href="https://recipe-planner-1632.netlify.app" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">Recipe Planner</a>, a user-friendly app that helps individuals organize meals, browse suggestions, and create structured grocery lists — blending frontend clarity with scalable backend logic.</>,
+        <>Looking ahead, my goal is to deepen my front-end skills with both React and Angular, while continuing to expand my backend capabilities using Python and MongoDB. I’m excited to explore tech stacks that allow me to build powerful, data-driven applications — and I’m especially interested in projects that blend frontend precision with backend complexity.</>,
+        <>Eventually, I want to contribute to open-source projects and collaborate with other developers who care about writing clean code, building inclusive applications, and pushing the web forward. Whether it’s building smarter tools, cleaner interfaces, or more secure systems, I’m all in on becoming the kind of engineer who builds with intention and impact.</>,
+      ],
+    },
+    {
+      title: 'Why This Journey Matters',
+      content: [
+        <>For me, this shift from software sales to full-stack development isn’t just a career move—it’s a reflection of who I am and who I’m becoming. I spent years on the front lines of tech, translating complex tools into solutions for clients. That experience taught me how software can make or break a business, but it also made me curious: what if I could be the one building the solution instead of just selling it?</>,
+        <>That question sparked a transformation. I didn’t come from a traditional coding background. Instead, I brought persistence, client empathy, and a real-world understanding of business needs into a new arena: software engineering. At <a href="https://www.utsa.edu" target="_blank" rel="noopener noreferrer" className="underline text-blue-700 hover:text-blue-900">UTSA</a>, I began diving into full-stack development with an emphasis on practical impact—apps that solve real user problems and tools that don’t just work but <em>work well</em>.</>,
+        <>What fuels me today is the limitless potential of technology. I’m not just learning to code—I’m learning to create, to collaborate, and to contribute. From sales calls to SQL queries, projects like CVitaePRO, my Kanban Board, and Recipe Planner are how I turn ideas into working software that serves real people.</>,
+        <>I believe great software comes from diverse experience and intentional thinking. My path into development may be non-traditional, but it’s exactly that blend of business, communication, and code that I bring to every project I touch.</>,
+      ],
+    },
+    {
+      title: 'In Closing',
+      content: [
+        <>Thanks for reading—I’m Jonathan Green, and I’m here to build meaningful software with heart and precision. From AI resume tools to personal productivity apps, I approach every project with curiosity, intention, and a desire to make a difference.</>,
+        <>If you’re a fellow developer, mentor, or someone curious about breaking into tech, I’d love to connect. Let’s chat, collaborate, or just carve fresh ideas together—on the web or on the mountain.</>,
+        <>You can reach me directly through the <a href="/contact" className="underline text-blue-700 hover:text-blue-900">Contact Me</a> page. Let's build something worth sharing.</>,
+      ],
+    },
+  ];
+
   return (
-    <section>
-      <div id="about-me">
-      <h2>About Me</h2>
-      <img src="/profile.png" alt="Nathan Green" width={400} height={600}/>
+    <section className="px-6 py-8">
+      <div id="about-me" className="flex flex-col items-center text-center mb-6">
+        <motion.img
+          src="/profile.png"
+          alt="Jonathan Green"
+          width={400}
+          height={600}
+          className="transition-transform duration-500 ease-in-out hover:scale-105 hover:-translate-y-1"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        />
       </div>
-      <p>
-        <section className="project-card">
-          <h2>Hi! I’m Nathan Green</h2>
-          <p>
-            I’m a former software salesperson and aspiring full-stack developer with a passion for building web
-            applications that solve real-world problems. My journey into development stems from my professional
-            background, love for problem-solving, and curiosity about how technology shapes our lives.
-          </p>
-        </section>
 
-        <section className="project-card">
-          <h2>From Sales to Software Development</h2>
-          <p>
-            For years, I worked in software sales, acting as the bridge between clients and development teams. This role
-            gave me insight into the software development lifecycle and taught me how to identify and communicate client
-            needs effectively. While I enjoyed helping customers find solutions, I became increasingly curious about how
-            the software I sold was built. I wanted to be the one creating the tools that make people’s lives easier,
-            which led me to pursue full-stack development.
-          </p>
-          <p>
-            This transition has been both challenging and rewarding. Sales honed my communication and collaboration
-            skills—qualities that now help me as a developer when working in teams or interpreting project requirements.
-            My background also instilled a user-focused mindset that I bring to every project I tackle.
-          </p>
-        </section>
-
-        <section className="project-card">
-          <h2>Why Full-Stack Development?</h2>
-          <p>
-            What excites me about full-stack development is the ability to work on both the front and back ends of an
-            application. I enjoy designing intuitive user interfaces that look great and function seamlessly while
-            ensuring that the backend systems are robust, scalable, and efficient. This holistic approach to development
-            is deeply satisfying, allowing me to see projects through from start to finish.
-          </p>
-          <p>
-            I’m driven by the opportunity to solve real-world problems through technology. Whether it’s streamlining
-            workflows, creating new tools, or enhancing user experiences, I thrive on finding creative, impactful
-            solutions.
-          </p>
-        </section>
-
-        <section className="project-card">
-          <h2>Interests and Inspirations</h2>
-          <p>
-            Outside of coding, I’m an avid skier. The thrill of tackling challenging slopes, coupled with the serenity
-            of the mountains, is something I deeply cherish. Skiing has taught me persistence, adaptability, and
-            focus—qualities that directly translate to coding and problem-solving.
-          </p>
-          <p>
-            I’m also passionate about lifelong learning. Transitioning from software sales to development has been a
-            continuous journey of discovery. Each project, bug fix, and new concept reinforces my love for technology
-            and the joy of mastering new skills.
-          </p>
-        </section>
-
-        <section className="project-card">
-          <h2>My Vision as a Developer</h2>
-          <p>
-            As an aspiring full-stack developer, I aim to build applications that are functional, accessible, and
-            impactful. Great software isn’t just about solving problems; it’s about crafting user experiences that are
-            meaningful and enjoyable. To achieve this, I prioritize empathy, staying current with industry trends, and
-            adhering to core development principles.
-          </p>
-        </section>
-
-        <section className="project-card">
-          <h2>Projects and Goals</h2>
-          <p>
-            While I’m early in my development journey, I’ve already built several projects, including web applications
-            that enhance user experiences and tools powered by APIs. Each project has taught me new skills, from
-            mastering JavaScript frameworks like React to building responsive designs.
-          </p>
-          <p>
-            In the future, I want to contribute to open-source projects, tackle more complex applications, and explore
-            emerging technologies like artificial intelligence and blockchain. These goals align with my passion for
-            pushing boundaries and continuous learning.
-          </p>
-        </section>
-
-        <section className="project-card">
-          <h2>Why This Journey Matters</h2>
-          <p>
-            This career shift from sales to development is about more than just a new role—it’s a reflection of my
-            desire to grow and contribute meaningfully. I believe in the transformative power of technology and am
-            excited to play a part in shaping innovative solutions.
-          </p>
-          <p>
-            What drives me most is the limitless potential of the tech industry. Every day brings new opportunities to
-            learn, create, and collaborate. For me, coding is not just a career but a way to make a lasting impact.
-          </p>
-        </section>
-
-        <section className="project-card">
-          <h2>In Closing</h2>
-          <p>
-            In summary, I’m Nathan Green—a former software salesperson turned aspiring full-stack developer. I’m
-            passionate about solving problems through technology, building impactful applications, and continuously
-            growing as a developer. Whether I’m skiing down a mountain or debugging a challenging issue, I approach
-            every endeavor with determination, curiosity, and a desire to excel.
-          </p>
-          <p>
-            Thank you for taking the time to learn about me. If you’d like to connect, collaborate, or chat about
-            technology, skiing, or anything in between, feel free to reach out!
-          </p>
-        </section>
-      </p>
+      {sections.map((section, i) => (
+        <motion.section
+          key={section.title}
+          className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-6 rounded-md my-8 shadow-md w-[calc(100%-3.5in)] mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.4 }}
+          variants={fadeInVariants}
+          custom={i}
+        >
+          <motion.h2
+            className="text-2xl font-extrabold text-center mb-4 relative w-fit mx-auto after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {section.title}
+          </motion.h2>
+          {section.content.map((para, idx) => (
+            <motion.p
+              key={`${section.title}-para-${idx}`}
+              className="text-left text-lg font-normal mb-4"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: idx * 0.15 }}
+              viewport={{ once: true }}
+            >
+              {para}
+            </motion.p>
+          ))}
+        </motion.section>
+      ))}
     </section>
   );
 };
