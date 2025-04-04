@@ -6,7 +6,7 @@ const Contact = () => {
         If you'd like to connect or collaborate, feel free to reach out through any of the following methods:
       </p>
 
-      <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base font-medium text-left sm:text-center px-2 sm:px-0">
+      <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base font-medium text-center sm:text-center px-2 sm:px-0">
         <li>
           <strong>Email:</strong>{' '}
           <a
