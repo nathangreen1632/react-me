@@ -1,19 +1,19 @@
 const Resume = () => {
   return (
-    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-44 rounded-md text-center my-8 shadow-md w-[calc(100%-3.5in)] mx-auto">
+    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-10 md:px-20 lg:px-32 py-10 sm:py-16 md:py-24 lg:py-32 rounded-md text-center my-8 shadow-md w-full sm:w-[95%] md:w-[95%] mx-auto">
       <div className="text-center">
-        <h2 className="text-3xl font-bold mb-4">Resume</h2>
+        <h2 className="text-2xl sm:text-3xl font-bold mb-4">Resume</h2>
         <a
           href="/Jonathan_Green_Resume.docx"
           download="Jonathan_Green_Resume.docx"
         >
-          <button className="px-4 py-2 mb-6 text-[#ccdad1] dark:text-black bg-black dark:bg-gray-400 rounded text-base font-medium hover:outline hover:outline-2 hover:outline-[#646cff] hover:rounded-[30px] hover:dark:outline-orange-400 transition-all">
+          <button className="px-4 py-2 mb-6 text-[#ccdad1] dark:text-black bg-black dark:bg-gray-400 rounded text-sm sm:text-base font-medium hover:outline hover:outline-2 hover:outline-[#646cff] hover:rounded-[30px] hover:dark:outline-orange-400 transition-all">
             Download My Resume
           </button>
         </a>
 
-        <h2 className="text-2xl font-semibold mb-4">Proficiencies</h2>
-        <ul className="flex sm:grid-cols-3 flex-col gap-3 text-base font-medium">
+        <h2 className="text-xl sm:text-2xl font-semibold mb-4">Proficiencies</h2>
+        <ul className="flex flex-col sm:grid-cols-2 md:grid-cols-3 gap-3 text-sm sm:text-base font-medium">
           <li>
             <a
               href="https://weather-dashboard-c4pa.onrender.com/"
