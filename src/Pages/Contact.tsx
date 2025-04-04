@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-80 rounded-md text-center my-8 shadow-md">
+    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-80 rounded-md text-center my-8 shadow-md w-[calc(100%-3.5in)] mx-auto">
       <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
       <p className="mb-4">
         If you'd like to connect or collaborate, feel free to reach out through any of the following methods:
