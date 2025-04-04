@@ -1,6 +1,6 @@
 const Resume = () => {
   return (
-    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-6 py-6 flex justify-center items-center min-h-[calc(100vh-350px)]">
+    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-44 rounded-md text-center my-8 shadow-md w-[calc(100%-3.5in)] mx-auto">
       <div className="text-center">
         <h2 className="text-3xl font-bold mb-4">Resume</h2>
         <a
