@@ -35,7 +35,7 @@ const App = () => {
         </nav>
       </header>
 
-      <main className="p-4 text-left flex-grow">
+      <main className="p-4 text-left flex-grow flex items-center justify-center">
       <Routes>
           <Route path="/" element={<AboutMe />} />
           <Route path="/portfolio" element={<Portfolio />} />
