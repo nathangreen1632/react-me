@@ -1,12 +1,12 @@
 const Contact = () => {
   return (
-    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-80 rounded-md text-center my-8 shadow-md w-[calc(100%-3.5in)] mx-auto">
-      <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
-      <p className="mb-4">
+    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 md:py-8 lg:py-12 rounded-md text-center my-8 dark:sm:my-4 dark:md:my-6 shadow-md w-full sm:w-[95%] md:w-[90%] mx-auto">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">Contact Me</h2>
+      <p className="mb-4 text-sm sm:text-base">
         If you'd like to connect or collaborate, feel free to reach out through any of the following methods:
       </p>
 
-      <ul className="space-y-2 text-base font-medium">
+      <ul className="space-y-3 sm:space-y-2 text-sm sm:text-base font-medium text-left sm:text-center px-2 sm:px-0">
         <li>
           <strong>Email:</strong>{' '}
           <a
@@ -49,23 +49,22 @@ const Contact = () => {
             jgreen1632
           </a>
         </li>
-        <li>
+        <li className="whitespace-nowrap">
           <strong>Phone:</strong>{' '}
           <a
             href="tel:5127870879"
-            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50 mr-4"
+            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50"
           >
             Call Me
-          </a>{''}
-          ||
+          </a>{' '}
+          <span className="mx-1 text-gray-600 dark:text-gray-400">||</span>
           <a
             href="sms:5127870879"
-            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50 ml-4"
+            className="text-blue-800 dark:text-orange-400 underline hover:opacity-50"
           >
             Text Me
           </a>
         </li>
-
         <li>
           <strong>Location:</strong> Kyle, Texas
         </li>
