@@ -1,6 +1,7 @@
 const Resume = () => {
   return (
-    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-10 md:px-20 lg:px-32 py-10 sm:py-16 md:py-24 lg:py-32 rounded-md text-center my-8 shadow-md w-full sm:w-[95%] md:w-[95%] mx-auto">
+    <section className="px-6 py-6 w-[98.5%]">
+    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-10 md:px-20 lg:px-32 py-10 sm:py-16 md:py-24 lg:py-32 rounded-md text-center my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto">
       <div className="text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Resume</h2>
         <a
@@ -126,6 +127,7 @@ const Resume = () => {
           </li>
         </ul>
       </div>
+    </section>
     </section>
   );
 };
