@@ -88,7 +88,7 @@ const AboutMe: React.FC = () => {
   ];
 
   return (
-    <section className="px-6 py-8">
+    <section className="px-6 py-6">
       <div id="about-me" className="flex flex-col items-center text-center mb-6">
         <motion.img
           src="/profile.png"
@@ -105,7 +105,7 @@ const AboutMe: React.FC = () => {
       {sections.map((section, i) => (
         <motion.section
           key={section.title}
-          className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 md:py-8 lg:py-12 rounded-md text-center my-8 dark:sm:my-4 dark:md:my-6 shadow-md w-full sm:w-[95%] md:w-[90%] mx-auto"
+          className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 md:py-8 lg:py-12 rounded-md text-center my-8 dark:sm:my-4 dark:md:my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
