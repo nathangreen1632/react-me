@@ -8,7 +8,7 @@ import FloatingThemeToggleButton from "./components/FloatingThemeToggleButton.ts
 const App = () => {
   return (
     <div className="flex flex-col min-h-screen bg-neutral-800 dark:bg-black text-[#38302E] dark:text-[#ccdad1] font-['Roboto'] leading-relaxed">
-    <header className="relative flex flex-col items-center mb-5 bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-4 border-2 border-[#6F6866] dark:border-none shadow-[2px_8px_12px_rgba(0.2,0.2,0.2,1)]">
+    <header className="relative flex flex-col items-center mb-5 bg-[#B3C4BE] dark:bg-black text-[#38302E] dark:text-[#ccdad1] p-4 border-2 border-[#6F6866] dark:border-none shadow-[2px_8px_12px_rgba(0.2,0.2,0.2,1)]">
         <h1 className="text-4xl font-bold text-center m-0">Jonathan Green</h1>
         <FloatingThemeToggleButton />
         <nav className="flex flex-wrap justify-center gap-4 my-4">
@@ -44,7 +44,7 @@ const App = () => {
         </Routes>
       </main>
 
-      <footer className="bg-[#9CAEA9] dark:bg-black text-black dark:text-[#ccdad1] text-center p-4 font-bold border-2 border-[#6F6866] dark:border-none shadow-[2px_8px_12px_rgba(0.2,0.2,0.2,1)]">
+      <footer className="bg-[#B3C4BE] dark:bg-black text-black dark:text-[#ccdad1] text-center p-4 font-bold border-2 border-[#6F6866] dark:border-none shadow-[2px_8px_12px_rgba(0.2,0.2,0.2,1)]">
         <p className="mb-4">© {new Date().getFullYear()} Jonathan Green</p>
         <div className="flex flex-wrap justify-center gap-4">
           <a href="https://github.com/nathangreen1632" target="_blank" rel="noopener noreferrer">
