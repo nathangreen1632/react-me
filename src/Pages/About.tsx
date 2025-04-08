@@ -105,7 +105,7 @@ const AboutMe: React.FC = () => {
       {sections.map((section, i) => (
         <motion.section
           key={section.title}
-          className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 md:py-8 lg:py-12 rounded-md text-center my-8 dark:sm:my-4 dark:md:my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto"
+          className="bg-[#B3C4BE] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 md:py-8 lg:py-12 rounded-md text-center my-8 dark:sm:my-4 dark:md:my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.25 }}
@@ -116,7 +116,7 @@ const AboutMe: React.FC = () => {
             className="text-2xl font-extrabold text-center mb-4 relative w-fit mx-auto after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.25 }}
           >
             {section.title}
           </motion.h2>
@@ -126,7 +126,7 @@ const AboutMe: React.FC = () => {
               className="text-left text-lg font-normal mb-4"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: idx * 0.075 }}
+              transition={{ duration: 0.25, delay: idx * 0.075 }}
               viewport={{ once: true }}
             >
               {para}
