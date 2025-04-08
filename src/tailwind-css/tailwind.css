@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply transition-colors duration-500;
+    }
+}
+
 @layer utilities {
     .vertical-rotated-text {
         writing-mode: vertical-rl;
