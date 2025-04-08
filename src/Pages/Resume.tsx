@@ -1,12 +1,12 @@
 const Resume = () => {
   return (
     <section className="px-6 py-6 w-[98.5%]">
-    <section className="bg-[#9CAEA9] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-10 md:px-20 lg:px-32 py-10 sm:py-16 md:py-24 lg:py-32 rounded-md text-center my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto">
+    <section className="bg-[#B3C4BE] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-10 md:px-20 lg:px-32 py-10 sm:py-16 md:py-24 lg:py-32 rounded-md text-center my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto">
       <div className="text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4">Resume</h2>
         <a
-          href="/Jonathan_Green_Resume.docx"
-          download="Jonathan_Green_Resume.docx"
+          href="/Jonathan_Green_resume.pdf"
+          download="Jonathan_Green_Resume.pdf"
         >
           <button className="px-4 py-2 mb-6 text-[#ccdad1] dark:text-black bg-black dark:bg-gray-400 rounded text-sm sm:text-base font-medium hover:outline hover:outline-2 hover:outline-[#646cff] hover:rounded-[30px] hover:dark:outline-orange-400 transition-all">
             Download My Resume
