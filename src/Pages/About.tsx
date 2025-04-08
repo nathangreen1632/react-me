@@ -1,7 +1,9 @@
-import { motion } from 'framer-motion';
 import React from 'react';
+import { motion, useReducedMotion } from 'framer-motion';
 
 const AboutMe: React.FC = () => {
+  const shouldReduceMotion = useReducedMotion();
+
   const fadeInVariants = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
@@ -95,10 +97,10 @@ const AboutMe: React.FC = () => {
           alt="Jonathan Green"
           width={400}
           height={600}
-          className="transition-transform duration-500 ease-in-out hover:scale-105 hover:-translate-y-1"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          className="transition-transform duration-500 ease-in-out hover:motion-safe:scale-105 hover:motion-safe:-translate-y-1"
+          initial={shouldReduceMotion ? false : { opacity: 0, y: -20 }}
+          animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
+          transition={shouldReduceMotion ? undefined : { duration: 0.8 }}
         />
       </div>
 
@@ -106,17 +108,17 @@ const AboutMe: React.FC = () => {
         <motion.section
           key={section.title}
           className="bg-[#B3C4BE] dark:bg-black text-[#38302E] dark:text-[#ccdad1] px-4 sm:px-6 md:px-10 lg:px-20 py-8 sm:py-10 md:py-8 lg:py-12 rounded-md text-center my-8 dark:sm:my-4 dark:md:my-6 shadow-md w-full sm:w-[90%] md:w-[90%] mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.25 }}
-          variants={fadeInVariants}
+          initial={shouldReduceMotion ? false : "hidden"}
+          whileInView={shouldReduceMotion ? undefined : "visible"}
+          viewport={shouldReduceMotion ? undefined : { once: true, amount: 0.25 }}
+          variants={shouldReduceMotion ? undefined : fadeInVariants}
           custom={i}
         >
           <motion.h2
             className="text-2xl font-extrabold text-center mb-4 relative w-fit mx-auto after:content-[''] after:absolute after:w-0 after:h-[2px] after:left-0 after:-bottom-1 after:bg-blue-500 after:transition-all after:duration-500 hover:after:w-full"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.25 }}
+            initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+            whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+            transition={shouldReduceMotion ? undefined : { duration: 0.25 }}
           >
             {section.title}
           </motion.h2>
@@ -124,10 +126,10 @@ const AboutMe: React.FC = () => {
             <motion.p
               key={`${section.title}-para-${idx}`}
               className="text-left text-lg font-normal mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.25, delay: idx * 0.075 }}
-              viewport={{ once: true }}
+              initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
+              whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+              transition={shouldReduceMotion ? undefined : { duration: 0.25, delay: idx * 0.075 }}
+              viewport={shouldReduceMotion ? undefined : { once: true }}
             >
               {para}
             </motion.p>
