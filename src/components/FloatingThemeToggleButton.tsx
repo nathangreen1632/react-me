@@ -1,32 +1,47 @@
 import { useEffect, useState } from 'react';
 
 const FloatingThemeToggleButton = () => {
-  const getInitialTheme = () => {
-    if (localStorage.theme === 'dark') return 'dark';
-    if (localStorage.theme === 'light') return 'light';
-    // Fallback to system preference
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  const getInitialTheme = (): 'light' | 'dark' | 'system' => {
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme === 'light' || storedTheme === 'dark' || storedTheme === 'system') {
+      return storedTheme;
+    }
+    return 'system'; // Default to system
   };
 
-  const [theme, setTheme] = useState(getInitialTheme());
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>(getInitialTheme);
 
-  useEffect(() => {
-    if (theme === 'system') {
-      localStorage.removeItem('theme');
+  // Handles applying the theme correctly
+  const applyTheme = (currentTheme: string) => {
+    if (currentTheme === 'system') {
       const isSystemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
       document.documentElement.classList.toggle('dark', isSystemDark);
     } else {
-      localStorage.theme = theme;
-      document.documentElement.classList.toggle('dark', theme === 'dark');
+      document.documentElement.classList.toggle('dark', currentTheme === 'dark');
+    }
+  };
+
+  useEffect(() => {
+    localStorage.setItem('theme', theme);
+    applyTheme(theme);
+
+    if (theme === 'system') {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      const systemThemeChangeHandler = () => {
+        applyTheme('system');
+      };
+      mediaQuery.addEventListener('change', systemThemeChangeHandler);
+
+      return () => {
+        mediaQuery.removeEventListener('change', systemThemeChangeHandler);
+      };
     }
   }, [theme]);
 
   const toggleTheme = () => {
-    setTheme ((prev) => {
-      if (prev === 'light') return 'dark';
-      if (prev === 'dark') return 'system';
-      return 'light';
-    });
+    setTheme((prev) =>
+      prev === 'light' ? 'dark' : prev === 'dark' ? 'system' : 'light'
+    );
   };
 
   const renderIcon = () => {
