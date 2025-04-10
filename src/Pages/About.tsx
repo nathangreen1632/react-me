@@ -93,7 +93,7 @@ const AboutMe: React.FC = () => {
     <section className="px-6 py-6">
       <div id="about-me" className="flex flex-col items-center text-center mb-6">
         <motion.img
-          src="/profile.png"
+          src="/profile.webp"
           alt="Jonathan Green"
           width={400}
           height={600}
