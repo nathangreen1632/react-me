@@ -97,11 +97,13 @@ const AboutMe: React.FC = () => {
           alt="Jonathan Green"
           width={400}
           height={600}
+          loading="lazy"
           className="transition-transform duration-500 ease-in-out hover:motion-safe:scale-105 hover:motion-safe:-translate-y-1"
           initial={shouldReduceMotion ? false : { opacity: 0, y: -20 }}
           animate={shouldReduceMotion ? false : { opacity: 1, y: 0 }}
           transition={shouldReduceMotion ? undefined : { duration: 0.8 }}
         />
+
       </div>
 
       {sections.map((section, i) => (
