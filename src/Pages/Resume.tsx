@@ -5,8 +5,8 @@ const Resume = () => {
         <div className="text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Resume</h2>
           <a
-            href="/Jonathan_Green_resume.pdf"
-            download="Jonathan_Green_Resume.pdf"
+            href="/Jonathan%20Green_SE2.pdf"
+            download="JonathanGreen_Resume.pdf"
           >
             <button className="px-4 py-2 mb-6 text-[#ccdad1] dark:text-black bg-black dark:bg-gray-400 rounded text-sm sm:text-base font-medium hover:outline hover:outline-2 hover:outline-[#646cff] hover:rounded-[30px] hover:dark:outline-orange-400 motion-safe:transition-all motion-safe:duration-300">
               Download My Resume
@@ -18,9 +18,9 @@ const Resume = () => {
             {[
               { label: "HTML", link: "https://weather-dashboard-c4pa.onrender.com/" },
               { label: "CSS", link: "https://recipe-planner-1632.netlify.app/" },
-              { label: "JavaScript", link: "https://payroll-tracker.netlify.app/" },
-              { label: "TypeScript", link: "https://github.com/nathangreen1632/socialNetwork" },
-              { label: "Python", link: "https://github.com/nathangreen1632/python-menu" },
+              { label: "JavaScript", link: "https://www.cvitaepro.com/" },
+              { label: "TypeScript", link: "https://www.careergistpro.com/" },
+              { label: "Python", link: "https://www.pydatapro.com/" },
               { label: "Express", link: "https://kanban-board-t5ud.onrender.com/" },
               { label: "Vite", link: "https://github.com/nathangreen1632/Cypress" },
               { label: "Node.js", link: "https://toggle-blog.netlify.app" },
